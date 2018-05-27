@@ -106,6 +106,7 @@ bool User::loginBySid(string& sid) {
 }
 
 bool User::logout(string& sid) {
+    authorized = valid = false;
     return user_manager.removeSid(id, sid);
 }
 
